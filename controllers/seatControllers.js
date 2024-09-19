@@ -40,7 +40,7 @@ exports.updateSeat = async (req, res) => {
     const seat = await Seat.findByPk(req.params.id);
     if (!seat) return res.status(404).send("Seat not found");
 
-    await seat.update(req.dody);
+    await seat.update(req.body);
     res.status(200).send(seat);
   } catch (err) {
     res.status(500).send(err.message);

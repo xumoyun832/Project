@@ -40,7 +40,7 @@ exports.updateGender = async (req, res) => {
     const gender = await Gender.findByPk(req.params.id);
     if (!gender) return res.status(404).send("Gender not found");
 
-    await gender.update(req.dody);
+    await gender.update(req.body);
     res.status(200).send(gender);
   } catch (err) {
     res.status(500).send(err.message);

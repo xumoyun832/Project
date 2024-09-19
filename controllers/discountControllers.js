@@ -40,7 +40,7 @@ exports.updateDiscount = async (req, res) => {
     const discount = await Discount.findByPk(req.params.id);
     if (!discount) return res.status(404).send("Discount not found");
 
-    await discount.update(req.dody);
+    await discount.update(req.body);
     res.status(200).send(discount);
   } catch (err) {
     res.status(500).send(err.message);

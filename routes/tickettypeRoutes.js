@@ -115,7 +115,7 @@ router.put("/tickettype/:id", tickettypeControllers.updateTickettype);
 
 /**
  * @swagger
- * /tickettype/{id}:
+ * /api/tickettype/{id}:
  *   delete:
  *     tags: [Tickettype]
  *     summary: Delete tickettype by ID

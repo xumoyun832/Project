@@ -40,7 +40,7 @@ exports.updateCart = async (req, res) => {
     const cart = await Cart.findByPk(req.params.id);
     if (!cart) return res.status(404).send("Cart not found");
 
-    await cart.update(req.dody);
+    await cart.update(req.body);
     res.status(200).send(cart);
   } catch (err) {
     res.status(500).send(err.message);

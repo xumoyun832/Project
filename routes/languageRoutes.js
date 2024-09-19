@@ -111,7 +111,7 @@ router.put("/language/:id", languageControllers.updateLanguage);
 
 /**
  * @swagger
- * /language/{id}:
+ * /api/language/{id}:
  *   delete:
  *     tags: [Language]
  *     summary: Delete language by ID

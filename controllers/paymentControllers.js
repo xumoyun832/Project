@@ -40,7 +40,7 @@ exports.updatePayment = async (req, res) => {
     const payment = await Payment.findByPk(req.params.id);
     if (!payment) return res.payment(404).send("Payment not found");
 
-    await payment.update(req.dody);
+    await payment.update(req.body);
     res.payment(200).send(payment);
   } catch (err) {
     res.payment(500).send(err.message);

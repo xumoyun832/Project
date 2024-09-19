@@ -17,5 +17,12 @@ module.exports = (sequelize, DataTypes) => {
     },
   });
 
+  District.associate = (models) => {
+    District.belongsTo(models.Region, {
+      foreignKey: "region_id",
+      as: "region",
+    });
+  };
+
   return District;
 };

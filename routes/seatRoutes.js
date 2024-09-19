@@ -127,7 +127,7 @@ router.put("/seat/:id", seatControllers.updateSeat);
 
 /**
  * @swagger
- * /seat/{id}:
+ * /api/seat/{id}:
  *   delete:
  *     tags: [Seat]
  *     summary: Delete seat by ID

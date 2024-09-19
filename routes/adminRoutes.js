@@ -123,7 +123,7 @@ router.put("/admin/:id", adminControllers.updateAdmin);
 
 /**
  * @swagger
- * /admin/{id}:
+ * /api/admin/{id}:
  *   delete:
  *     tags: [Admin]
  *     summary: Delete admin by ID

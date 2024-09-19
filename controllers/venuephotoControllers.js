@@ -40,7 +40,7 @@ exports.updateVenuephoto = async (req, res) => {
     const venuephoto = await Venuephoto.findByPk(req.params.id);
     if (!venuephoto) return res.status(404).send("Venuephoto not found");
 
-    await venuephoto.update(req.dody);
+    await venuephoto.update(req.body);
     res.status(200).send(venuephoto);
   } catch (err) {
     res.status(500).send(err.message);

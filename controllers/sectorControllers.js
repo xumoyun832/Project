@@ -40,7 +40,7 @@ exports.updateSector = async (req, res) => {
     const sector = await Sector.findByPk(req.params.id);
     if (!sector) return res.status(404).send("Sector not found");
 
-    await sector.update(req.dody);
+    await sector.update(req.body);
     res.status(200).send(sector);
   } catch (err) {
     res.status(500).send(err.message);

@@ -40,7 +40,7 @@ exports.updateStatus = async (req, res) => {
     const status = await Status.findByPk(req.params.id);
     if (!status) return res.status(404).send("Status not found");
 
-    await status.update(req.dody);
+    await status.update(req.body);
     res.status(200).send(status);
   } catch (err) {
     res.status(500).send(err.message);

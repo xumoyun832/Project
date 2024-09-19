@@ -40,7 +40,7 @@ exports.updateAdmin = async (req, res) => {
     const admin = await Admin.findByPk(req.params.id);
     if (!admin) return res.status(404).send("Admin not found");
 
-    await admin.update(req.dody);
+    await admin.update(req.body);
     res.status(200).send(admin);
   } catch (err) {
     res.status(500).send(err.message);

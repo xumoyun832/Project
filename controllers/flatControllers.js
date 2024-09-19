@@ -40,7 +40,7 @@ exports.updateFlat = async (req, res) => {
     const flat = await Flat.findByPk(req.params.id);
     if (!flat) return res.status(404).send("Flat not found");
 
-    await flat.update(req.dody);
+    await flat.update(req.body);
     res.status(200).send(flat);
   } catch (err) {
     res.status(500).send(err.message);

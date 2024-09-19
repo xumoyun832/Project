@@ -111,7 +111,7 @@ router.put("/district/:id", districtControllers.updateDistrict);
 
 /**
  * @swagger
- * /district/{id}:
+ * /api/district/{id}:
  *   delete:
  *     tags: [District]
  *     summary: Delete district by ID

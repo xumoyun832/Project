@@ -38,6 +38,18 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "ticket_id",
       as: "ticket",
     });
+    Ticket.hasMany(models.Tickettype, {
+      foreignKey: "ticket_id",
+      as: "tickettype",
+    });
+    Ticket.belongsTo(models.Seat, {
+      foreignKey: "seat_id",
+      as: "seat",
+    });
+    Ticket.belongsTo(models.Status, {
+      foreignKey: "status_id",
+      as: "status",
+    });
   };
   return Ticket;
 };

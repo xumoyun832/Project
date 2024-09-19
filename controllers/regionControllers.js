@@ -40,7 +40,7 @@ exports.updateRegion = async (req, res) => {
     const region = await Region.findByPk(req.params.id);
     if (!region) return res.status(404).send("Region not found");
 
-    await region.update(req.dody);
+    await region.update(req.body);
     res.status(200).send(region);
   } catch (err) {
     res.status(500).send(err.message);

@@ -40,7 +40,7 @@ exports.updateLanguage = async (req, res) => {
     const language = await Language.findByPk(req.params.id);
     if (!language) return res.status(404).send("Language not found");
 
-    await language.update(req.dody);
+    await language.update(req.body);
     res.status(200).send(language);
   } catch (err) {
     res.status(500).send(err.message);

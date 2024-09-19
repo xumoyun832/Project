@@ -55,7 +55,7 @@ exports.updateBooking = async (req, res) => {
     const booking = await Booking.findByPk(req.params.id);
     if (!booking) return res.status(404).send("Booking not found");
 
-    await booking.update(req.dody);
+    await booking.update(req.body);
     res.status(200).send(admin);
   } catch (err) {
     res.status(500).send(err.message);

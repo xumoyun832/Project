@@ -40,7 +40,7 @@ exports.updateTicket = async (req, res) => {
     const ticket = await Ticket.findByPk(req.params.id);
     if (!ticket) return res.status(404).send("Ticket not found");
 
-    await ticket.update(req.dody);
+    await ticket.update(req.body);
     res.status(200).send(ticket);
   } catch (err) {
     res.status(500).send(err.message);

@@ -123,7 +123,7 @@ router.put("/cart/:id", cartControllers.updateCart);
 
 /**
  * @swagger
- * /cart/{id}:
+ * /api/cart/{id}:
  *   delete:
  *     tags: [Cart]
  *     summary: Delete cart by ID

@@ -40,7 +40,7 @@ exports.updateDelivery = async (req, res) => {
     const delivery = await Delivery.findByPk(req.params.id);
     if (!delivery) return res.status(404).send("Delivery not found");
 
-    await delivery.update(req.dody);
+    await delivery.update(req.body);
     res.status(200).send(delivery);
   } catch (err) {
     res.status(500).send(err.message);

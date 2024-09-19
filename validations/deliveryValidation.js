@@ -2,7 +2,7 @@ const Joi = require("joi");
 
 const validateDelivery = (delivery) => {
   const schema = Joi.object({
-    name: Joi.string().min().required(),
+    name: Joi.string().required(),
   });
 
   return schema.validate(delivery);

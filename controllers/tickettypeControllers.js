@@ -40,7 +40,7 @@ exports.updateTickettype = async (req, res) => {
     const tickettype = await Tickettype.findByPk(req.params.id);
     if (!tickettype) return res.status(404).send("Tickettype not found");
 
-    await tickettype.update(req.dody);
+    await tickettype.update(req.body);
     res.status(200).send(tickettype);
   } catch (err) {
     res.status(500).send(err.message);

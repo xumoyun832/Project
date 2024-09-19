@@ -40,7 +40,7 @@ exports.updateDistrict = async (req, res) => {
     const district = await District.findByPk(req.params.id);
     if (!district) return res.status(404).send("District not found");
 
-    await district.update(req.dody);
+    await district.update(req.body);
     res.status(200).send(district);
   } catch (err) {
     res.status(500).send(err.message);

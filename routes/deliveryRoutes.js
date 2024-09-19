@@ -107,7 +107,7 @@ router.put("/delivery/:id", deliveryControllers.updateDelivery);
 
 /**
  * @swagger
- * /delivery/{id}:
+ * /api/delivery/{id}:
  *   delete:
  *     tags: [Delivery]
  *     summary: Delete delivery by ID

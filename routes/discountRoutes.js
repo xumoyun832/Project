@@ -111,7 +111,7 @@ router.put("/discount/:id", discountControllers.updateDiscount);
 
 /**
  * @swagger
- * /discount/{id}:
+ * /api/discount/{id}:
  *   delete:
  *     tags: [Discount]
  *     summary: Delete discount by ID
